@@ -1,1 +1,0 @@
-/Users/aminkaraji/.vim/janus/vim/vimrc
