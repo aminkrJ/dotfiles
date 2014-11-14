@@ -11,9 +11,11 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 " rails capybara
 command Focus .s/ do/, focus: true do
 command DFocus .s/, focus: true do/ do
-
 map <C-f> :Focus<CR>
 map <C-d> :DFocus<CR>
+
+" binding.pry
+map \p obinding.pry<ESC>
 
 " code folding
 set foldmethod=indent
