@@ -1,4 +1,5 @@
-[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
+export RBENV_ROOT=/usr/local/var/rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 #git auto-complete
 if [ -f ~/.git-completion.bash ]; then
@@ -9,6 +10,9 @@ fi
 if [ -f ~/.bash_aliases ]; then
   . ~/.bash_aliases
 fi
+
+# This is needed for deployment to TEST enviroment etc.
+alias sa='ssh-add ~/.ssh/id_rsa'
 
 #completion for ssh, config + known_hosts
 _complete_ssh_hosts () {
@@ -23,5 +27,15 @@ _complete_ssh_hosts () {
           }
           # SSH autocomplete, just config
           complete -o default -o nospace -W "$(grep -i -e '^Host ' ~/.ssh/config | awk '{print substr($0, index($0,$2))}' ORS=' ' )" ssh scp sftp
-# This is needed for deployment to TEST enviroment etc.
-alias sa='ssh-add ~/.ssh/id_rsa'
+
+
+
+# git branch in prompt
+_parse_git_branch () {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+prompt_user="\u"
+prompt_path="\w"
+prompt_git_branch='$(_parse_git_branch)'
+prompt_time="\t"
+export PS1="\[$Red\]$prompt_user\[$NC\][\[$Cyan\]$prompt_path\[$NC\]]\[$Purple\]$prompt_git_branch\[$NC\] $ "
