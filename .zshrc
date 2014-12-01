@@ -1,5 +1,8 @@
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 
+# brew sed
+PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
+
 export RBENV_ROOT="$HOME/.rbenv/"
 eval "$(rbenv init -)"
 

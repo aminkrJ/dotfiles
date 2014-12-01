@@ -1,3 +1,21 @@
+[user]
+  name = Amin Karaji
+  email = amin.karaji@siteminder.com
+[color]
+  ui = auto
+[alias]
+  co = checkout
+  ci = commit
+  st = status
+  lg = log --graph --decorate --format='%Cred%h%Creset%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(cyan)%aN%Creset'
+[branch]
+  autosetuprebase = always
+[log]
+  decorate = true
+[push]
+  default = current
+[merge]
+  defaultToUpstream = true
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
