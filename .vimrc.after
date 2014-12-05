@@ -16,6 +16,8 @@ map <C-d> :DFocus<CR>
 
 " binding.pry
 map \p obinding.pry<ESC>
+" debugger
+map \o debugger<ESC>
 
 " code folding
 set foldmethod=indent
