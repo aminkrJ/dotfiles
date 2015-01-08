@@ -1,5 +1,8 @@
 export PATH=/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 
+#autojump
+[[ -s `brew --prefix`/etc/autojump.sh ]] && . `brew --prefix`/etc/autojump.sh
+
 # brew sed
 PATH="/usr/local/opt/gnu-sed/libexec/gnubin:$PATH"
 
