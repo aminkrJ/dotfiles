@@ -13,19 +13,19 @@ AwesomePrint.defaults = {
   :color => {
     :args       => :yellowish,
     :array      => :white,
-    :bigdecimal => :blue,
+    :bigdecimal => :cyanish,
     :class      => :yellow,
     :date       => :greenish,
     :falseclass => :red,
-    :fixnum     => :blue,
-    :float      => :blue,
-    :hash       => :pale,
+    :fixnum     => :cyanish,
+    :float      => :cyanish,
+    :hash       => :yellow,
     :keyword    => :cyan,
     :method     => :purpleish,
     :nilclass   => :red,
-    :rational   => :blue,
+    :rational   => :cyanish,
     :string     => :yellowish,
-    :struct     => :pale,
+    :struct     => :yellow,
     :symbol     => :cyanish,
     :time       => :greenish,
     :trueclass  => :green,
@@ -34,3 +34,8 @@ AwesomePrint.defaults = {
 }
 
 Pry.print = proc { |output, value| output.puts value.ai }
+
+
+Pry.commands.alias_command 'c', 'continue'
+Pry.commands.alias_command 's', 'step'
+Pry.commands.alias_command 'n', 'next'
