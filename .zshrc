@@ -25,3 +25,5 @@ alias ctags='ctags -R .'
 alias rm='rm -i'
 alias reload='source ~/.zshrc'
 
+
+[ -s "/Users/aminkaraji/.scm_breeze/scm_breeze.sh" ] && source "/Users/aminkaraji/.scm_breeze/scm_breeze.sh"
