@@ -31,3 +31,6 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 
 "tern for javascript
 let g:tern_map_keys=1
+
+"vim clipboard support
+set clipboard=unnamed
