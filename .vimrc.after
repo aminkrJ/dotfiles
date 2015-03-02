@@ -10,8 +10,8 @@ set linebreak
 let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " rails capybara
-command Focus .s/ do/, focus: true do
-command DFocus .s/, focus: true do/ do
+command Focus .s/ do/, focus: true, driver: :chrome do
+command DFocus .s/, focus: true, driver: :chrome do/ do
 map <C-f> :Focus<CR>
 map <C-d> :DFocus<CR>
 
@@ -32,5 +32,7 @@ let g:ackprg = 'ag --nogroup --nocolor --column'
 "tern for javascript
 let g:tern_map_keys=1
 
-"vim clipboard support
 set clipboard=unnamed
+
+" yank, paste multiple times!
+xnoremap p pgvy
