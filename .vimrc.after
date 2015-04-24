@@ -48,4 +48,7 @@ endif
 let g:switch_mapping = "gs"
 
 " search word under cursor everywhere using Ag or Ack
+" noremap <leader>s :Ag
+" map g3 :execute "Ag -w " . expand("<cword>")<Bar> cw<CR>
+" map g4 :execute "Ag -w --type= " . &filetype . " " . expand("<cword>")<Bar> cw<CR>
 noremap @ :Ag <cword><cr>
