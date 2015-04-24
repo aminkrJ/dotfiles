@@ -52,3 +52,5 @@ let g:switch_mapping = "gs"
 " map g3 :execute "Ag -w " . expand("<cword>")<Bar> cw<CR>
 " map g4 :execute "Ag -w --type= " . &filetype . " " . expand("<cword>")<Bar> cw<CR>
 noremap @ :Ag <cword><cr>
+
+noremap <C-l> :CtrlPGitLog<cr>
