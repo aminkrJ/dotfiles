@@ -47,3 +47,5 @@ endif
 " switch
 let g:switch_mapping = "gs"
 
+" search word under cursor everywhere using Ag or Ack
+noremap @ :Ag <cword><cr>
