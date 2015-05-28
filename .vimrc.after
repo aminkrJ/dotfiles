@@ -62,13 +62,12 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 " using relativenumbers with numbertoggle
 " gitgutter
- nmap ]h <Plug>GitGutterNextHunk
- nmap [h <Plug>GitGutterPrevHunk
+nmap ]h <Plug>GitGutterNextHunk
+nmap [h <Plug>GitGutterPrevHunk
  " hp for preview
- nmap <Leader>ha <Plug>GitGutterStageHunk
- nmap <Leader>hu <Plug>GitGutterRevertHunk
- " mapping multi-cursor
-let g:multi_cursor_next_key='<C-m>'
-let g:multi_cursor_prev_key='<C-p>'
-let g:multi_cursor_skip_key='<C-x>'
-let g:multi_cursor_quit_key='<Esc>'
+nmap <Leader>ha <Plug>GitGutterStageHunk
+nmap <Leader>hu <Plug>GitGutterRevertHunk
+
+" i18n vim
+vmap <Leader>z :call I18nTranslateString()<CR>
+vmap <Leader>dt :call I18nDisplayTranslation()<CR>
