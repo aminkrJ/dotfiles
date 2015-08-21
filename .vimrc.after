@@ -71,3 +71,7 @@ nmap <Leader>hu <Plug>GitGutterRevertHunk
 " i18n vim
 vmap <Leader>z :call I18nTranslateString()<CR>
 vmap <Leader>dt :call I18nDisplayTranslation()<CR>
+
+" turbux
+let g:turbux_command_prefix = 'bundle exec'
+let g:turbux_command_rspec  = 'rspec --color'
