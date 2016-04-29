@@ -1,4 +1,8 @@
 colorscheme  Tomorrow-Night
+
+" using Source Code Pro
+set guifont=Source\ Code\ Pro\ 11
+
 "colorscheme  github
 let g:NERDTreeWinPos = "right"
 set guioptions-=T " Removes top toolbar
@@ -75,3 +79,5 @@ vmap <Leader>dt :call I18nDisplayTranslation()<CR>
 " turbux
 let g:turbux_command_prefix = 'bundle exec'
 let g:turbux_command_rspec  = 'rspec --color'
+
+let g:jsx_ext_required = 0 " Allow JSX in normal JS files
